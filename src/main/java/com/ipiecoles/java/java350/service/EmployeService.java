@@ -15,19 +15,6 @@ import java.time.LocalDate;
 @Service
 public class EmployeService {
     private EmployeRepository employeRepository;
-
-    /**
-     * Méthode enregistrant un nouvel employé dans l'entreprise
-     *
-     * @param nom Le nom de l'employé
-     * @param prenom Le prénom de l'employé
-     * @param poste Le poste de l'employé
-     * @param niveauEtude Le niveau d'étude de l'employé
-     * @param tempsPartiel Le pourcentage d'activité en cas de temps partiel
-     *
-     * @throws EmployeException Si on arrive au bout des matricules possibles
-     * @throws EntityExistsException Si le matricule correspond à un employé existant
-     */
     public void embaucheEmploye(String nom, String prenom, Poste poste, NiveauEtude niveauEtude, Double tempsPartiel) throws EmployeException, EntityExistsException {
 
         //Récupération du type d'employé à partir du poste
